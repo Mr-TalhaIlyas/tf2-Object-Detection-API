@@ -49,7 +49,7 @@ python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1
 python -c "import tensorflow as tf;tf.config.list_physical_devices('GPU')"
 ```
 you'll see following 
-img2.png
+![alt text](https://github.com/Mr-TalhaIlyas/tf2-Object-Detection-API/blob/master/screens/img2.png)
 5. In command line (cl) cd to your desired directory where you wanna install library
 ```
  cd /data_ssd/tfod/
@@ -139,7 +139,7 @@ Now you have successfully installed objectdetction api on linux 16.04 x86_64, yo
 python object_detection/builders/model_builder_tf2_test.py
 ```
 you will see following
-img3.png
+![alt text](https://github.com/Mr-TalhaIlyas/tf2-Object-Detection-API/blob/master/screens/img3.png)
 # Possible Errors
 You might face following errors
 
@@ -168,7 +168,7 @@ Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: 
 2021-02-26 14:37:23.985770: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcublas.so.11'; dlerror: libcublas.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-10.1/lib64:/usr/local/cuda-10.2/lib64
 2021-02-26 14:37:23.985807: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcublasLt.so.11'; dlerror: libcublasLt.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-10.1/lib64:/usr/local/cuda-10.2/lib64
 ```
-img4
+![alt text](https://github.com/Mr-TalhaIlyas/tf2-Object-Detection-API/blob/master/screens/img4.png)
 ## Solution
 It possibly means that you have multiple CUDA versions installed on your machine so you will have to adjust the `PATH`
 so append following line to `~/bashrc`
