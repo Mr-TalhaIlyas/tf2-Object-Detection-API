@@ -48,6 +48,8 @@ python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1
 # or try this one
 python -c "import tensorflow as tf;tf.config.list_physical_devices('GPU')"
 ```
+you'll see following 
+img2.png
 5. In command line (cl) cd to your desired directory where you wanna install library
 ```
  cd /data_ssd/tfod/
@@ -136,6 +138,8 @@ Now you have successfully installed objectdetction api on linux 16.04 x86_64, yo
 # check the installation
 python object_detection/builders/model_builder_tf2_test.py
 ```
+you will see following
+img3.png
 # Possible Errors
 You might face following errors
 
@@ -157,4 +161,27 @@ This might be because of the cudnn or CUDA version mismatch so match versions fo
 |cuDNN |7.6|
 |protoc | 3.61 |
 
+## Error 2
+If you get error like following
+```
+Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-10.1/lib64:/usr/local/cuda-10.2/lib64
+2021-02-26 14:37:23.985770: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcublas.so.11'; dlerror: libcublas.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-10.1/lib64:/usr/local/cuda-10.2/lib64
+2021-02-26 14:37:23.985807: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcublasLt.so.11'; dlerror: libcublasLt.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-10.1/lib64:/usr/local/cuda-10.2/lib64
+```
+img4
+## Solution
+It possibly means that you have multiple CUDA versions installed on your machine so you will have to adjust the `PATH`
+so append following line to `~/bashrc`
+```
+export LD_LIBRARY_PATH="/usr/local/cuda-10.1/lib64:/usr/local/cuda-10.2/lib64"
+# then
+export PATH="/home/user01/.local/bin:/usr/local/cuda-10.1/bin:/usr/local/cuda-10.2/bin:/home/user01/anaconda3/envs/tfod/bin:/home/user01/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+```
+paths are usually same but your might be different so modify accordingly
+or try following
+```
+# CUDA related exports
+export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+```
 
