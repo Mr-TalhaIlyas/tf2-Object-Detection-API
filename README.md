@@ -20,7 +20,7 @@ Follow the same order of steps
 
 
 mostly i'll be following the steps in 
-https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html
+[Tutorial](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html)
 but following in steps of above i had some probelms with installin protobuf library so i just simplify the 
 installing process of protobuf library in this file.
 
