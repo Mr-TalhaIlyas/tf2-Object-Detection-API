@@ -169,7 +169,7 @@ Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: 
 2021-02-26 14:37:23.985807: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcublasLt.so.11'; dlerror: libcublasLt.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-10.1/lib64:/usr/local/cuda-10.2/lib64
 ```
 ![alt text](https://github.com/Mr-TalhaIlyas/tf2-Object-Detection-API/blob/master/screens/img4.png)
-## Solution
+## Solution 2
 It possibly means that you have multiple CUDA versions installed on your machine so you will have to adjust the `PATH`
 so append following line to `~/bashrc`
 ```
