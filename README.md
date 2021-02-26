@@ -1,4 +1,4 @@
-# Setup TF2 Object Detection API
+# Setup TF2 Object Detection API (Linux)
 
 In this file I assume that you have installed the Nvidia and CuDNN dependencies for you Linux 16.04 86x_64, 
 also that you already have some working tf_gpu enviorment.
@@ -136,3 +136,25 @@ Now you have successfully installed objectdetction api on linux 16.04 x86_64, yo
 # check the installation
 python object_detection/builders/model_builder_tf2_test.py
 ```
+# Possible Errors
+You might face following errors
+
+## Error 1
+```python
+ERROR: tensorflow-gpu 2.3.1 has requirement tensorflow-estimator<2.4.0,>=2.3.0, but you'll have tensorflow-estimator 2.4.0 which is incompatible.
+ERROR: tensorflow 2.4.1 has requirement absl-py~=0.10, but you'll have absl-py 0.9.0 which is incompatible.
+ERROR: tensorflow 2.4.1 has requirement numpy~=1.19.2, but you'll have numpy 1.18.0 which is incompatible.
+ERROR: tensorflow 2.4.1 has requirement six~=1.15.0, but you'll have six 1.13.0 which is incompatible.
+```
+## Solution 1
+
+This might be because of the cudnn or CUDA version mismatch so match versions for me it was
+| library        | Version     |
+| ------------- |:-------------:|
+|tf-models-official| 2.3.0 |
+|tensorflow-gpu    | 2.3.0 |
+| CUDA | 10.1      |
+|cuDNN |7.6|
+|protoc | 3.61 |
+
+
