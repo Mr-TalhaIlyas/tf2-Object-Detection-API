@@ -172,6 +172,10 @@ Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: 
 ## Solution 2
 It possibly means that you have multiple CUDA versions installed on your machine so you will have to adjust the `PATH`
 so append following line to `~/bashrc`
+open via
+```
+gedit /home/user01/.bashrc
+```
 ```
 export LD_LIBRARY_PATH="/usr/local/cuda-10.1/lib64:/usr/local/cuda-10.2/lib64"
 # then
