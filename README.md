@@ -177,17 +177,19 @@ open via
 ```
 gedit /home/user01/.bashrc
 ```
-```
-export LD_LIBRARY_PATH="/usr/local/cuda-10.1/lib64:/usr/local/cuda-10.2/lib64"
-# then
-export PATH="/home/user01/.local/bin:/usr/local/cuda-10.1/bin:/usr/local/cuda-10.2/bin:/home/user01/anaconda3/envs/tfod/bin:/home/user01/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
-```
 for all three version of `CUDA` i.e. `10.0`, `10.1` and `10.2`.
 ```
 # or if you have all the versions like 10.0, 10.1 and 10.2 installed add the following 2 lines in your bash PATH
 PATH="/home/user01/.local/bin:/usr/local/cuda-10.0/bin:/usr/local/cuda-10.1/bin:/usr/local/cuda-10.2/bin:/home/user01/anaconda3/envs/abbas_env/bin:/home/user01/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 LD_LIBRARY_PATH="/usr/local/cuda-10.0/lib64:/usr/local/cuda-10.1/lib64:/usr/local/cuda-10.2/lib64"
 ```
+or after activating your `env` you can simply `export` like.
+```
+export LD_LIBRARY_PATH="/usr/local/cuda-10.1/lib64:/usr/local/cuda-10.2/lib64"
+# then
+export PATH="/home/user01/.local/bin:/usr/local/cuda-10.1/bin:/usr/local/cuda-10.2/bin:/home/user01/anaconda3/envs/tfod/bin:/home/user01/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+```
+
 paths are usually same but your might be different so modify accordingly
 or try following
 ```
