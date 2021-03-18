@@ -1,3 +1,4 @@
+[![Bash Shell](https://badges.frapsoft.com/bash/v1/bash.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 # Setup TF2 Object Detection API (Linux)
 
 In this file I assume that you have installed the Nvidia and CuDNN dependencies for you Linux 16.04 86x_64, 
@@ -15,7 +16,7 @@ In this file we will only see how to install TF2 objedct detection API on Linux 
 	  GPU Driver version   : 440.64.00
 
 
-### NOTE: 
+### NOTE 1: 
 Follow the same order of steps
 
 
@@ -129,7 +130,7 @@ finelly type,
 # install all the requirements 
 python -m pip install .
 ```
-### Note :
+### Note2 :
 If you have CUDA version 10.1 or less you might need to specify the `tf-models-official` veresion to be installed 
 TO do that open the `setup.py` file and specify the version like `tf-models-official==2.3.0`
 
@@ -151,7 +152,7 @@ ERROR: tensorflow 2.4.1 has requirement numpy~=1.19.2, but you'll have numpy 1.1
 ERROR: tensorflow 2.4.1 has requirement six~=1.15.0, but you'll have six 1.13.0 which is incompatible.
 ```
 ## Solution 1
-
+If you follow **Note 2** it'llbe solved
 This might be because of the cudnn or CUDA version mismatch so match versions for me it was
 | library        | Version     |
 | ------------- |:-------------:|
@@ -180,6 +181,9 @@ gedit /home/user01/.bashrc
 export LD_LIBRARY_PATH="/usr/local/cuda-10.1/lib64:/usr/local/cuda-10.2/lib64"
 # then
 export PATH="/home/user01/.local/bin:/usr/local/cuda-10.1/bin:/usr/local/cuda-10.2/bin:/home/user01/anaconda3/envs/tfod/bin:/home/user01/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+```
+for all three version of `CUDA` i.e. `10.0`, `10.1` and `10.2`.
+```
 # or if you have all the versions like 10.0, 10.1 and 10.2 installed add the following 2 lines in your bash PATH
 PATH="/home/user01/.local/bin:/usr/local/cuda-10.0/bin:/usr/local/cuda-10.1/bin:/usr/local/cuda-10.2/bin:/home/user01/anaconda3/envs/abbas_env/bin:/home/user01/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 LD_LIBRARY_PATH="/usr/local/cuda-10.0/lib64:/usr/local/cuda-10.1/lib64:/usr/local/cuda-10.2/lib64"
