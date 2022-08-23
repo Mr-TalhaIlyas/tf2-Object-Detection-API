@@ -1,0 +1,20 @@
+item {
+    name: "mitosis",
+    id: 1,
+    display_name: "mitosis"
+}
+item {
+    name: "apoptosis",
+    id: 2,
+    display_name: "apoptosis"
+}
+item {
+    name: "tumor",
+    id: 3,
+    display_name: "tumor"
+}
+item {
+    name: "non_tumor",
+    id: 4,
+    display_name: "non_tumor"
+}

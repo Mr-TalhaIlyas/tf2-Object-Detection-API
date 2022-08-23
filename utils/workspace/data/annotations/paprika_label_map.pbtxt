@@ -1,0 +1,35 @@
+item {
+    name: "background",
+    id: 0,
+    display_name: "background"
+}
+item {
+    name: "blossom_end_rot",
+    id: 1,
+    display_name: "blossom_end_rot"
+}
+item {
+    name: "graymold",
+    id: 2,
+    display_name: "graymold"
+}
+item {
+    name: "powdery_mildew",
+    id: 3,
+    display_name: "powdery_mildew"
+}
+item {
+    name: "spider_mite",
+    id: 4,
+    display_name: "spider_mite"
+}
+item {
+    name: "spotting_disease",
+    id: 5,
+    display_name: "spotting_disease"
+}
+item {
+    name: "snails_and_slugs",
+    id: 6,
+    display_name: "snails_and_slugs"
+}
